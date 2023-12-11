@@ -1,0 +1,39 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <div class="container1">
+            <h1>Kilometers to mailes converter</h1>
+
+            <label for="l1">Enter distance Kilometers : </label>
+            <input type="number" id="l1">
+
+            <button onclick="Miles()">Convert to Miles</button>
+
+
+            <h1 id="m1"></h1>
+
+        </div>
+    </div>
+
+    <script>
+        function Miles() {
+            var i = parseFloat(document.getElementById("l1").value);
+
+            var factor = 0.621371;
+            var miles = i * factor;
+
+
+            document.getElementById("m1").innerHTML = i + " " + "kilometer is approximately" + " " + miles;
+        }
+    </script>
+</body>
+
+</html>
